@@ -1,0 +1,405 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>SVT</title>
+	<meta property="og:image" content="Path to my teaser.png"/>
+	<meta property="og:title" content="Self-supervised Video Transformer" />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<div style="text-align: center;">
+		<span style="font-size:42px">Self-supervised Video Transformer</span>
+		<br> <br>
+		<table align=center width=800px>
+			<table align=center width=500px>
+				<tr>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=K2WBZTwAAAAJ">Kanchana Ranasinghe</a></span>
+						</center>
+					</td>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.ch/citations?user=tM9xKA8AAAAJ">Muzammal Naseer</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=700px>
+				<tr>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=M59O9lkAAAAJ">Salman Khan</a></span>
+						</center>
+					</td>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.ch/citations?user=zvaeYnUAAAAJ">Fahad Khan</a></span>
+						</center>
+					</td>
+					<td align=center width=180px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=vcw0TJIAAAAJ&hl">Michael Ryoo</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+		<br>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<div style="text-align: center;">
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2112.01514'>[Paper]</a></span>
+						</div>
+					</td>
+					<td align=center width=120px>
+						<div style="text-align: center;">
+							<span style="font-size:24px"><a href='https://github.com/kahnchana/svt'>[GitHub]</a></span><br>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</table>
+		<br>
+	</div>
+
+	<div style="text-align: center;">
+		<table align=center width=850px>
+			<tr>
+
+				<td width=600px>
+					<div style="text-align: center;">
+						<img class="round" style="width:600px" src="./resources/svt_intro.png"/>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table align=center width=600px>
+			<tr>
+				<td>
+					<div style="text-align: justify;">
+						Self-supervised Video Transformer (SVT) learns
+						cross-view correspondences and motion correspondences by jointly matching video
+						clips sampled with varying spatial field of view and temporal resolutions.
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<hr>
+
+	<table align=center width=850px>
+		<div style="text-align: center;"><h1>Abstract</h1></div>
+		<tr>
+			<td>
+				<div style="text-align: justify;">
+					In this paper, we propose self-supervised training for video transformers using unlabelled video
+					data. From a given video, we create local and global spatiotemporal views with varying spatial
+					sizes and frame rates. Our self-supervised objective seeks to match the features of these different
+					views representing the same video, to be invariant to spatiotemporal variations in actions. To the
+					best of our knowledge, the proposed approach is the first to alleviate the dependency on negative
+					samples or dedicated memory banks in Self-supervised Video Transformer (SVT). Further, owing to the
+					flexibility of Transformer models, SVT supports slow-fast video processing within a single
+					architecture using dynamically adjusted positional encodings and supports long-term relationship
+					modeling along spatiotemporal dimensions. Our approach performs well on four action recognition
+					benchmarks (Kinetics-400, UCF-101, HMDB-51, and SSv2) and converges faster with small batch sizes.
+				</div>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+
+<!--	<div style="text-align: center;"><h1>Talk</h1></div>-->
+<!--	<p align="center">-->
+<!--		<iframe width="660" height="395" src="https://www.youtube.com/embed/T4pGBvTvkyA" title="OPL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+<!--&lt;!&ndash;		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>&ndash;&gt;-->
+<!--	</p>-->
+
+<!--	<table align=center width=800px>-->
+<!--		<br>-->
+<!--		<tr>-->
+<!--			<div style="text-align: center;">-->
+<!--				<span style="font-size:28px"><a href='./files/opl_presentation_slides.pdf'>[Slides]</a>-->
+<!--				</span>-->
+<!--			</div>-->
+<!--		</tr>-->
+<!--	</table>-->
+<!--	<hr>-->
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Results across datasets </h1></center>
+				</left>
+			</td>
+		</tr>
+	</table>
+
+	<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+		.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+			font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+		.tg .tg-wp8o{border-color:#000000;text-align:center;vertical-align:top}
+	</style>
+	<table class="tg">
+		<thead>
+		<tr>
+			<th class="tg-wp8o">   <br>Dataset</th>
+			<th class="tg-wp8o" colspan="2">   <br>Linear</th>
+			<th class="tg-wp8o" colspan="2">   <br>Finetune</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td class="tg-wp8o"></td>
+			<td class="tg-wp8o">baseline</td>
+			<td class="tg-wp8o">ours</td>
+			<td class="tg-wp8o">baseline</td>
+			<td class="tg-wp8o">ours</td>
+		</tr>
+		<tr>
+			<td class="tg-wp8o">UCF-101</td>
+			<td class="tg-wp8o">TBA</td>
+			<td class="tg-wp8o">90.8</td>
+			<td class="tg-wp8o">   TBA</td>
+			<td class="tg-wp8o">93.7</td>
+		</tr>
+		<tr>
+			<td class="tg-wp8o">HMDB-51</td>
+			<td class="tg-wp8o">TBA</td>
+			<td class="tg-wp8o">57.8</td>
+			<td class="tg-wp8o">   TBA</td>
+			<td class="tg-wp8o">67.2</td>
+		</tr>
+		<tr>
+			<td class="tg-wp8o">   Kinetics-400</td>
+			<td class="tg-wp8o">TBA</td>
+			<td class="tg-wp8o">68.1</td>
+			<td class="tg-wp8o"><span style="font-weight:400;font-style:normal">77.9</span></td>
+			<td class="tg-wp8o">78.1</td>
+		</tr>
+		<tr>
+			<td class="tg-wp8o">SSv2</td>
+			<td class="tg-wp8o">TBA</td>
+			<td class="tg-wp8o">18.3</td>
+			<td class="tg-wp8o">59.1</td>
+			<td class="tg-wp8o">59.6</td>
+		</tr>
+		</tbody>
+	</table>
+	
+	<br>
+	<hr>
+
+	<div style="text-align: center;"><h1>Try our code</h1></div>
+<!--	<table align=center width=400px>-->
+<!--		<tr>-->
+<!--			<td align=center width=400px>-->
+<!--				<div style="text-align: center;">-->
+<!--					<td><img class="round" style="width:800px" src="./resources/code_intro.png"/></td>-->
+<!--				</div>-->
+<!--			</td>-->
+<!--		</tr>-->
+<!--	</table>-->
+<!--	<table align=center width=850px>-->
+<!--		<div style="text-align: center;">-->
+<!--			<tr>-->
+<!--				<td>-->
+<!--					<div style="text-align: justify;">-->
+<!--					Feature Analysis: We compare feature orthogonality as measured by OPL and feature similarity as-->
+<!--					measured by cosine similarity and plot their convergence during training. Feature similarity is-->
+<!--					initially high because all features are random immediately after initialization. OPL simultaneously-->
+<!--					enforces higher inter-class similarity and intra-class dissimilarity in comparison with the CE-->
+<!--					baseline.-->
+<!--					</div>-->
+<!--				</td>-->
+<!--			</tr>-->
+<!--		</div>-->
+<!--	</table>-->
+	<table align=center width=800px>
+		<br>
+		<tr><div style="text-align: center;">
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/kahnchana/svt'>[GitHub]</a>
+			</div>
+		</tr>
+		</span>
+	</table>
+	<br>
+
+	<hr>
+	<table align=center width=500px>
+		<center><h1>Paper and Supplementary Material</h1></center>
+		<tr>
+			<td><a href="https://arxiv.org/abs/2112.01514"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">
+				<b>Self-supervised Video Transformer</b><br>
+<!--				<br>-->
+				(hosted on <a href="https://arxiv.org/abs/2112.01514">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+	<hr>
+
+
+<!--	<table align=center width=900px>-->
+<!--		<tr>-->
+<!--			<td width=400px>-->
+<!--				<left>-->
+<!--					<center><h1>Acknowledgements</h1></center>-->
+<!--					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.-->
+<!--				</left>-->
+<!--			</td>-->
+<!--		</tr>-->
+<!--	</table>-->
+
+<br>
+</body>
+</html>
+
