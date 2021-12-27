@@ -13,12 +13,14 @@
 >*In this paper, we propose self-supervised training for video transformers using unlabelled video data. From a given video, we create local and global spatiotemporal views with varying spatial sizes and frame rates. Our self-supervised objective seeks to match the features of these different views representing the same video, to be invariant to spatiotemporal variations in actions. To the best of our knowledge, the proposed approach is the first to alleviate the dependency on negative samples or dedicated memory banks in Self-supervised Video Transformer (SVT). Further, owing to the flexibility of Transformer models, SVT supports slow-fast video processing within a single architecture using dynamically adjusted positional encodings and supports long-term relationship modeling along spatiotemporal dimensions. Our approach performs well on four action recognition benchmarks (Kinetics-400, UCF-101, HMDB-51, and SSv2) and converges faster with small batch sizes.*
 
 
-## Usage
-Refer to `requirements.txt` for installing all python dependencies. We use python 3.7 with pytorch 1.7.1.
+## Usage & Data
+Refer to `requirements.txt` for installing all python dependencies. We use python 3.7 with pytorch 1.7.1. 
+
+We download the official version of Kinetics-400 from [here](https://github.com/cvdfoundation/kinetics-dataset) and videos are resized using code [here](https://github.com/open-mmlab/mmaction2/tree/master/tools/data/kinetics).
 
 
 ## Self-supervised Training
-For self-supervised pre-training on models on the Kinetics-400 dataset, use the scripts in the `scripts` directory as follows. Change the paths to dataset as required. We download the official version of Kinetics-400 from [here](https://github.com/cvdfoundation/kinetics-dataset) and videos are resizing using code [here](https://github.com/open-mmlab/mmaction2/tree/master/tools/data/kinetics).
+For self-supervised pre-training on models on the Kinetics-400 dataset, use the scripts in the `scripts` directory as follows. Change the paths to dataset as required. 
 
 ```
 ./scripts/train.sh
