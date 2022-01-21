@@ -37,7 +37,7 @@ Scripts to perform evaluation (linear or knn) on selected downstream tasks are a
 
 
 ## Pretrained Models
-Our pre-trained models will be added soon. 
+Our pre-trained models can be found under [releases](https://github.com/kahnchana/svt/releases/tag/v1.0)
 
 
 ## Citation
