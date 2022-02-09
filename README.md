@@ -4,7 +4,7 @@
 [Muzammal Naseer](https://muzammal-naseer.netlify.app/),
 [Salman Khan](https://salman-h-khan.github.io),
 [Fahad Shahbaz Khan](https://sites.google.com/view/fahadkhans/home),
-[Michael Ryoo](http://michaelryoo.com),
+[Michael Ryoo](http://michaelryoo.com)
 
 **[Paper Link](https://arxiv.org/abs/2112.01514)** | **[Project Page](https://kahnchana.github.io/svt)** 
 
