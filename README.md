@@ -1,4 +1,4 @@
-# Self-Supervised Video Transformer
+# Self-Supervised Video Transformer (CVPR'22)
 
 [Kanchana Ranasinghe](https://kahnchana.github.io),
 [Muzammal Naseer](https://muzammal-naseer.netlify.app/),
