@@ -47,7 +47,6 @@ Our pre-trained models can be found under [releases](https://github.com/kahnchan
     title={Self-supervised Video Transformer}, 
     author={Kanchana Ranasinghe and Muzammal Naseer and Salman Khan and Fahad Shahbaz Khan and Michael Ryoo},
     booktitle={Conference on Computer Vision and Pattern Recognition},
-    address = {New Orleans, LA, USA},
     month = {June},
     year={2022}
   }
