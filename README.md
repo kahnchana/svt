@@ -43,14 +43,14 @@ Our pre-trained models can be found under [releases](https://github.com/kahnchan
 ## Citation
 
 ```bibtex
-@misc{ranasinghe2021selfsupervised,
-      title={Self-supervised Video Transformer}, 
-      author={Kanchana Ranasinghe and Muzammal Naseer and Salman Khan and Fahad Shahbaz Khan and Michael Ryoo},
-      year={2021},
-      eprint={2112.01514},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
+@inproceedings{ranasinghe2022selfsupervised,
+    title={Self-supervised Video Transformer}, 
+    author={Kanchana Ranasinghe and Muzammal Naseer and Salman Khan and Fahad Shahbaz Khan and Michael Ryoo},
+    booktitle={Conference on Computer Vision and Pattern Recognition},
+    address = {New Orleans, LA, USA},
+    month = {June},
+    year={2022}
+  }
 ```
 
 
