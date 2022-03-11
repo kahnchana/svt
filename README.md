@@ -46,7 +46,7 @@ Our pre-trained models can be found under [releases](https://github.com/kahnchan
 @inproceedings{ranasinghe2022selfsupervised,
     title={Self-supervised Video Transformer}, 
     author={Kanchana Ranasinghe and Muzammal Naseer and Salman Khan and Fahad Shahbaz Khan and Michael Ryoo},
-    booktitle={Conference on Computer Vision and Pattern Recognition},
+    booktitle={IEEE/CVF International Conference on Computer Vision and Pattern Recognition},
     month = {June},
     year={2022}
   }
@@ -54,4 +54,4 @@ Our pre-trained models can be found under [releases](https://github.com/kahnchan
 
 
 ## Acknowledgements
-Our code borrows heavily from [DINO](https://github.com/facebookresearch/dino) and [TimeSformer](https://github.com/facebookresearch/TimeSformer) repositories. We thank the authors for releasing their code. If you use our model, please consider citing these works as well.
+Our code is based on [DINO](https://github.com/facebookresearch/dino) and [TimeSformer](https://github.com/facebookresearch/TimeSformer) repositories. We thank the authors for releasing their code. If you use our model, please consider citing these works as well.
