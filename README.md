@@ -1,4 +1,4 @@
-# Self-Supervised Video Transformer (CVPR'22)
+# Self-Supervised Video Transformer (CVPR'22-Oral)
 
 [Kanchana Ranasinghe](https://kahnchana.github.io),
 [Muzammal Naseer](https://muzammal-naseer.netlify.app/),
