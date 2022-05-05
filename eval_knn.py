@@ -63,8 +63,8 @@ def extract_feature_pipeline(args):
     # ============ building network ... ============
     model = get_vit_base_patch16_224(cfg=config, no_head=True)
     ckpt = torch.load(args.pretrained_weights)
-    select_ckpt = "teacher"
-    renamed_checkpoint = {x[len("backbone."):]: y for x, y in ckpt[select_ckpt].items() if x.startswith("backbone.")}
+    # select_ckpt = "teacher"
+    renamed_checkpoint = {x[len("backbone."):]: y for x, y in ckpt.items() if x.startswith("backbone.")}
     msg = model.load_state_dict(renamed_checkpoint, strict=False)
     print(f"Loaded model with msg: {msg}")
     model.cuda()
