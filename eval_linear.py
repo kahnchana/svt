@@ -97,8 +97,8 @@ def eval_linear(args):
             raise Exception(f"invalid model: {args.arch}")
 
     ckpt = torch.load(args.pretrained_weights)
-    select_ckpt = 'motion_teacher' if args.use_flow else "teacher"
-    renamed_checkpoint = {x[len("backbone."):]: y for x, y in ckpt[select_ckpt].items() if x.startswith("backbone.")}
+    #  select_ckpt = 'motion_teacher' if args.use_flow else "teacher"
+    renamed_checkpoint = {x[len("backbone."):]: y for x, y in ckpt.items() if x.startswith("backbone.")}
     msg = model.load_state_dict(renamed_checkpoint, strict=False)
     print(f"Loaded model with msg: {msg}")
     model.cuda()
