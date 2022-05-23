@@ -30,4 +30,4 @@ python -m torch.distributed.launch \
   --opts \
   DATA.PATH_TO_DATA_DIR "${DATA_PATH}/splits" \
   DATA.PATH_PREFIX f"${DATA_PATH}/videos" \
-  DATA.USE_FLOW True
+  DATA.USE_FLOW False
