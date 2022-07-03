@@ -158,8 +158,10 @@ def train_svt(args):
 
     # ============ preparing data ... ============
     config = load_config(args)
+    if utils.is_main_process():
+        json.dump(vars(args), open(Path(args.output_dir) / "config.txt", "w"), indent=4)
     config.DATA.PATH_TO_DATA_DIR = args.data_path
-    config.DATA.PATH_PREFIX = os.path.dirname(args.data_path)
+    # config.DATA.PATH_PREFIX = os.path.dirname(args.data_path)
     dataset = Kinetics(cfg=config, mode="train", num_retries=10, get_flow=config.DATA.USE_FLOW)
     sampler = torch.utils.data.DistributedSampler(dataset, shuffle=True)
     data_loader = torch.utils.data.DataLoader(
