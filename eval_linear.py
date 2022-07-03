@@ -98,6 +98,8 @@ def eval_linear(args):
 
     ckpt = torch.load(args.pretrained_weights)
     #  select_ckpt = 'motion_teacher' if args.use_flow else "teacher"
+    if "teacher" in ckpt:
+        ckpt = ckpt["teacher"]
     renamed_checkpoint = {x[len("backbone."):]: y for x, y in ckpt.items() if x.startswith("backbone.")}
     msg = model.load_state_dict(renamed_checkpoint, strict=False)
     print(f"Loaded model with msg: {msg}")
