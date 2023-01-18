@@ -1,5 +1,11 @@
 # Self-Supervised Video Transformer (CVPR'22-Oral)
 
+	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-ucf101)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ucf101?p=self-supervised-video-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-hmdb-51)](https://paperswithcode.com/sota/action-recognition-in-videos-on-hmdb-51?p=self-supervised-video-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-something)](https://paperswithcode.com/sota/action-recognition-in-videos-on-something?p=self-supervised-video-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-classification-on-kinetics-400)](https://paperswithcode.com/sota/action-classification-on-kinetics-400?p=self-supervised-video-transformer)
+
 [Kanchana Ranasinghe](https://kahnchana.github.io),
 [Muzammal Naseer](https://muzammal-naseer.netlify.app/),
 [Salman Khan](https://salman-h-khan.github.io),
