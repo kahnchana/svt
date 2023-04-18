@@ -53,7 +53,7 @@ Our pre-trained models can be found under [releases](https://github.com/kahnchan
 
 
 ## Citation
-
+If you find our work, this repository, or pretrained models useful, please consider giving a star :star: and citation.
 ```bibtex
 @inproceedings{ranasinghe2022selfsupervised,
     title={Self-supervised Video Transformer}, 
