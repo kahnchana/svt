@@ -1,6 +1,9 @@
 # Self-Supervised Video Transformer (CVPR'22-Oral)
 
-	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/self-supervised-action-recognition-linear-on-3)](https://paperswithcode.com/sota/self-supervised-action-recognition-linear-on-3?p=self-supervised-video-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/self-supervised-action-recognition-linear-on)](https://paperswithcode.com/sota/self-supervised-action-recognition-linear-on?p=self-supervised-video-transformer)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/self-supervised-action-recognition-linear-on-1)](https://paperswithcode.com/sota/self-supervised-action-recognition-linear-on-1?p=self-supervised-video-transformer)
+
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-ucf101)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ucf101?p=self-supervised-video-transformer)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-hmdb-51)](https://paperswithcode.com/sota/action-recognition-in-videos-on-hmdb-51?p=self-supervised-video-transformer)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/self-supervised-video-transformer/action-recognition-in-videos-on-something)](https://paperswithcode.com/sota/action-recognition-in-videos-on-something?p=self-supervised-video-transformer)
